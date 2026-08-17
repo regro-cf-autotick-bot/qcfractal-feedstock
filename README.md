@@ -87,31 +87,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `qcarchivetesting, qcfractal, qcfractalcompute, qcportal` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install qcarchivetesting qcfractal qcfractalcompute qcportal
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install qcarchivetesting qcfractal qcfractalcompute qcportal
 ```
 
-It is possible to list all of the versions of `qcarchivetesting` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add qcarchivetesting qcfractal qcfractalcompute qcportal
+# for installing globally
+pixi global install qcarchivetesting qcfractal qcfractalcompute qcportal
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `qcarchivetesting` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search qcarchivetesting --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search qcarchivetesting --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search qcarchivetesting --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -123,6 +165,8 @@ mamba repoquery whoneeds qcarchivetesting --channel conda-forge
 # List dependencies of `qcarchivetesting`:
 mamba repoquery depends qcarchivetesting --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
